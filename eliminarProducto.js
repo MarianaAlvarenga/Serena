@@ -1,6 +1,4 @@
 
-console.log("Entre a eliminarProducto");
-
 function activarBotonesEliminar() {
     const BotonesEliminarProducto = document.querySelectorAll(".btn-eliminar-producto");
     BotonesEliminarProducto.forEach((boton, indice)=>{
@@ -14,7 +12,9 @@ function activarBotonesEliminar() {
             }            
             localStorage.setItem("carrito", JSON.stringify(carrito));
             console.log(carrito);
-            renderizarCarrito(carrito); 
+            console.log("ANTES DE RENDERIZAR");
+            renderizarCarrito(carrito);
+            console.log("DESPUÉS DE RENDERIZAR");
             activarBotonesEliminar();
             console.log(carrito);
         })

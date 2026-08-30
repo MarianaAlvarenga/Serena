@@ -13,9 +13,7 @@ botonesGuardar.forEach((boton, indice) =>{
         }
         const productoExistente = carrito.find((prod) => prod.id === indice);
         if(productoExistente){
-                productoExistente.cantidad++;
-
-                numProducto = productoExistente.cantidad;
+                sumarCantidad(productoExistente.id);
         } else {
             producto.cantidad = 1; 
             numProducto = producto.cantidad;

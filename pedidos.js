@@ -1,13 +1,11 @@
 
-/*Funcion renderizarCarrito*/ 
-const contenedor = document.getElementById("pedido-container");
-
-const carrito = JSON.parse(localStorage.getItem("carrito"))|| [];
 
 function renderizarCarrito(carrito){
+    /*Funcion renderizarCarrito*/ 
+    const contenedor = document.getElementById("pedido-container");
+    if (contenedor) {
+            contenedor.innerHTML = "";
     console.log("ENTRÉ A RENDERIZAR CARRITO");
-    
-    contenedor.innerHTML = "";
     carrito.forEach((producto) => {
         contenedor.innerHTML+= `
             <div class="products-container">
@@ -16,7 +14,7 @@ function renderizarCarrito(carrito){
                     <h3>${producto.nombre}</h3>
                         <div class="cantidad-buttons">    
                             <div>        
-                                <button class="cantidad-button">-</button>
+                                <button class="cantidad-button" onclick="restarCantidad(${producto.id})">-</button>
                                 <input class="cantidad" type="text" value="${producto.cantidad}"/>
                                 <button class="cantidad-button" onclick="sumarCantidad(${producto.id})">+</button>
                             </div>
@@ -33,6 +31,7 @@ function renderizarCarrito(carrito){
             <button class="boton">Enviar pedido <img class="img-enviar-pedido" src="./src/assets/images/whatsapp.png" alt="img-whatsapp"></button>
         </div>
     `    
+    }
 }
 function calcularTotal(carrito){
     let total = 0;
@@ -41,5 +40,5 @@ function calcularTotal(carrito){
     });
     return total;
 }
-
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 renderizarCarrito(carrito);
