@@ -13,17 +13,16 @@ botonesGuardar.forEach((boton, indice) =>{
         }
         const productoExistente = carrito.find((prod) => prod.id === indice);
         if(productoExistente){
-                sumarCantidad(productoExistente.id);
+            console.log("Producto existente");
+            sumarCantidad(productoExistente.id);
         } else {
             producto.cantidad = 1; 
             numProducto = producto.cantidad;
             carrito.push(producto);
-            console.log("Cantidad de este producto: ", producto.cantidad);
-            console.log("id del producto: ", producto.id);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMarcador();
         }
-
         
-        localStorage.setItem("carrito", JSON.stringify(carrito));
     })
 
 })

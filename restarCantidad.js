@@ -4,6 +4,7 @@ function restarCantidad (id) {
     productoExistente.cantidad--;
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    
     if (document.getElementById("pedido-container")) {
         renderizarCarrito(carrito);
     }
