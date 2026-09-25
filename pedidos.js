@@ -26,7 +26,7 @@ function renderizarCarrito(carrito){
         contenedor.innerHTML+=`
             <div class="products-total">
                 <h3>Total:________$${calcularTotal(carrito)}</h3>
-                <button class="boton">Enviar pedido <img class="img-enviar-pedido" src="./src/assets/images/whatsapp.png" alt="img-whatsapp"></button>
+                <button class="boton" onclick="enviarPedido()">Enviar pedido <img class="img-enviar-pedido" src="./src/assets/images/whatsapp.png" alt="img-whatsapp"></button>
             </div>
         `    
     }
@@ -38,6 +38,23 @@ function calcularTotal(carrito){
     });
     return total;
 
+}
+
+function enviarPedido(){
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let mensaje = "Hola, buenos días, quiero hacer un pedido:\n";
+
+    carrito.forEach(producto => {
+        mensaje += `-Producto: ${producto.nombre}\n`;
+        mensaje += ` Precio: $${producto.precio}\n`;
+        mensaje += ` Cantidad: ${producto.cantidad}\n\n`;
+
+        mensaje += `Total: $${calcularTotal(carrito)}`;
+    });
+
+    const mensajeFormateado = encodeURIComponent(mensaje);
+    const numero = "1136848154";
+    window.open(`https://wa.me/${numero}?text=${mensajeFormateado}`, "_blank");
 }
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 renderizarCarrito(carrito);
