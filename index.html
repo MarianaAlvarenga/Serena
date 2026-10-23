@@ -35,13 +35,12 @@
         <section id="inicio" class="grand-section">
             <div class="max-content">
                 <div class="container">
-                    <h1>Donde el diseño no se explica, se siente</h1>
+                    <h1>Convertí tu casa en un hogar</h1>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                         Nam, a voluptas? Omnis rerum cupiditate esse dignissimos? 
-                         Alias assumenda expedita nisi illum quo nam iste. Blanditiis id ipsa impedit ullam voluptas!
+                        Agregá texturas y colores a cada ambiente, dale personalidad y calidez a cada momento, viví y creá recuerdos tibios y suaves, nosotros te ayudamos.
+                        Tenemos acolchados, sábanas, almohadones, cortinas, alfombras y mucho más, variedad de colores y motivos, consultanos.
                     </p>
-                    <a href="#" class="link-default">EXPLORAR SÁBANAS</a>
+                    <a href="#slider-product-section" class="link-default">EXPLORAR PRODUCTOS</a>
                 </div>
             </div>
         </section>
@@ -55,17 +54,18 @@
                 <img src="./src/assets/images/Principal.jpg" alt="imagenDePresentacion">
             </div>
             <div class="presentation-text">
-                <h2>Construye una atmósfera única para tu negocio</h2>
+                <h2>Te ayudamos a armar la mejor combinación para tu ambiente</h2>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Nam, a voluptas? Omnis rerum cupiditate esse dignissimos? 
-                        Alias assumenda expedita nisi illum quo nam iste. Blanditiis id ipsa impedit ullam voluptas!
+                    Para tu comodidad, armamos combos completos de habitación, sala de estar y baño, de esta forma,
+                    y con un solo click, vas a poder renovar por completo cada uno de los ambientes de tu hogar.
+                    Contamos con gran variedad de colores, texturas y precios, solo tenes que elegir la combinación que 
+                    mejor va con vos.
                 </p>
-                <a href="#" class="link-default link-presentation">CONOCER LOS PAQUETES</a>
+                <a href="#" class="link-default link-presentation">CONOCER LOS COMBOS</a>
             </div>
         </section>
-        <section class="slider-product-section">
-            <div class="slider-container">
+        <section class="slider-product-section" id="slider-product-section">
+            <div class="slider-container" id="slider-container">
                 <div class="slide-product">
                     <div class="slider-container-image">
                         <img src="./src/assets/images/Acolchado con triple corderito reversible CAMPOMAYO.png" alt="Producto1">
@@ -150,13 +150,12 @@
                         <p class="slide-product-price">$35000</p>
                     </div>
                 </div>
-                <button class="arrow arrow-left"><</button>
-                <button class="arrow arrow-right">></button>
             </div>
+            <button class="arrow arrow-left" id="boton-anterior" onclick="anterior()"><</button>
+            <button class="arrow arrow-right" id="boton-siguiente" onclick="siguiente()">></button>
         </section>
 
         <section class="product-section-max-content">
-            <h2>Precios super accesibles</h2>
             <div class="products-container">
                 <div class="product">
                     <h4 class="product-name">SÁBANAS PREMIUM</h4>
@@ -286,5 +285,6 @@
     <script src="./restarCantidad.js"></script>
     <script src="./pedidos.js"></script>
     <script src="./marcador.js"></script>
+    <script src="./actualizarCarrusel.js"></script>
 </body>
 </html>

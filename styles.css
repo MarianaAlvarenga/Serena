@@ -6,8 +6,12 @@
 .container p{
     max-width: 40%;
     font-size: 1.6rem;
+    margin: 2rem;
 }
-
+.container a{
+    margin: 2rem;
+    border-radius: 3%;
+}
 .link-default{
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -18,7 +22,7 @@
     color: white;
     margin-top: 4rem;
     border: none;
-
+    border-radius: 3%;
     transition: all .3s ease;
 }
 
@@ -29,8 +33,14 @@
 .container{
     height: 100vh;
     align-content: center;
-    background-image: url(./src/assets/images/portada.png);
+    background-image: url(./src/assets/images/portada.jpg);
     background-size: cover;
+}
+.header-nav {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    padding: 10px 15px;
+    border-radius: 30px;
 }
 
 .grand-section h1{
@@ -104,7 +114,7 @@
     display: flex;
     gap: 8rem;
     padding: 4rem;
-    transition: transform .5s ease;
+    transition: transform 0.8s ease-in-out;
 }
 
 .arrow{
@@ -270,7 +280,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: absolute;
+    left: 7rem;
+    top: 1.1rem;
 }
 @media(max-width: 768px){
 
