@@ -41,6 +41,7 @@
     backdrop-filter: blur(8px);
     padding: 10px 15px;
     border-radius: 30px;
+    position: sticky;
 }
 
 .grand-section h1{
@@ -176,6 +177,24 @@
     margin-top: 4rem;
     display: flex;
     gap: 8rem;
+    align-items: stretch;
+}
+
+.product{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.product .link-default {
+    margin-top: auto;
+}
+.product-img{
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
 }
 
 .product-name{
@@ -201,6 +220,10 @@
     display: block;
     width: max-content;
     margin-inline: auto;
+}
+
+.products-container .product {
+    gap: 1.5rem;
 }
 
 footer{
