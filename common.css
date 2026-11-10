@@ -79,7 +79,7 @@ nav ul{
     font-size: 1.5rem;
     font-weight: 500;
 }
-p{
+p, delivery-points div{
     font-size: 1.6rem;
     margin-top: 2rem;
 }

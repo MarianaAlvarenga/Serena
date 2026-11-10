@@ -12,6 +12,17 @@
     margin: 2rem;
     border-radius: 3%;
 }
+
+h2{
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
 .link-default{
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -164,10 +175,6 @@ header{
     flex-shrink: 0;
 }
 
-.slide-container-description h3{
-    font-size: 2.2rem;
-}
-
 .slide-product-price{
     font-size: 3rem;
     font-weight: 900;
@@ -197,6 +204,7 @@ header{
 
 .product .link-default {
     margin-top: auto;
+    margin-bottom: 2rem;
 }
 .product-img{
     width: 100%;
@@ -255,7 +263,7 @@ footer{
     padding: 4rem;
 }
 
-.delivery-point-section p{
+.delivery-point-section p, .delivery-points a{
     border: 0.2rem solid var(--primary-color);
     color: var(--black-color);
     display: inline-block;
@@ -273,12 +281,6 @@ footer{
 }
 .delivery-points{
     padding: 1rem;
-}
-
-.delivery-point-section h3{
-    font-size: 2rem;
-    color: var(--black-color);
-    margin: 1rem;
 }
 
 .mi-pedido{
