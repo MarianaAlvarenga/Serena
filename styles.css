@@ -48,20 +48,6 @@ h3 {
     background-size: cover;
 }
 
-header{
-    position: sticky;
-    top: 10px;
-}
-
-.header-nav {
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(8px);
-    padding: 10px 15px;
-    border-radius: 30px;
-    position: sticky;
-    top: 10px;
-}
-
 .grand-section h1{
     font-size: 6rem;
     max-width: 70%;

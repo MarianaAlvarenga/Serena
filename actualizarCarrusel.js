@@ -6,7 +6,7 @@ const botonAnterior = document.getElementById("boton-anterior");
 const botonSiguiente = document.getElementById("boton-siguiente");
 
 let posicionActual = 0;
-
+actualizarCarrusel();
 function anterior(){
     if(posicionActual>0){
         posicionActual--;
