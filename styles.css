@@ -1,53 +1,3 @@
-.max-content{
-    max-width: 150rem;
-    margin-inline: auto;
-}   
-
-.container p{
-    max-width: 40%;
-    font-size: 1.6rem;
-    margin: 2rem;
-}
-.container a{
-    margin: 2rem;
-    border-radius: 3%;
-}
-
-h2{
-    font-weight: 500;
-    font-size: 3rem;
-}
-
-h3 {
-    font-weight: 300;
-    font-size: 2rem;
-}
-
-.link-default{
-    display: inline-block;
-    padding: 1.5rem 2rem;
-    text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: 500;
-    background-color: var(--secondary-color);
-    color: white;
-    margin-top: 4rem;
-    border: none;
-    border-radius: 3%;
-    transition: all .3s ease;
-}
-
-.link-default:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-}
-.container{
-    height: 100vh;
-    align-content: center;
-    background-image: url(./src/assets/images/portada.jpg);
-    background-size: cover;
-}
-
 .grand-section h1{
     font-size: 6rem;
     max-width: 70%;
@@ -64,29 +14,18 @@ h3 {
     color: var(--black-color);
 }
 
-.brand-section{
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6rem;
-    height: 10rem;
-    background-color: #ffff;
-}
-
-.brand-section img{
-    height: 5rem;
-    object-fit: scale-down;
-    filter: grayscale(1);
-}
-
 .presentation-section{
     display: flex;
     gap: 4rem;
     box-shadow: 0 0 1rem #0002;
     padding: 2rem;
 }
-
+.container{
+    height: 100vh;
+    align-content: center;
+    background-image: url(./src/assets/images/portada.jpg);
+    background-size: cover;
+}
 .presentation-container-image{
     flex-basis: 50%;
     max-height: 50rem;
@@ -101,11 +40,6 @@ h3 {
     flex-basis: 50%;
     padding: 2rem;
     align-content: center;
-}
-
-.presentation-max-content{
-    max-width: 70%;
-    margin-inline: auto;
 }
 
 .slider-product-section{
@@ -169,79 +103,6 @@ h3 {
     right: 0;
 }
 
-.product-title{
-    text-align: center;
-}
-
-.products-container{
-    margin-top: 4rem;
-    display: flex;
-    gap: 8rem;
-    align-items: stretch;
-}
-
-.product{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-.product .link-default {
-    margin-top: auto;
-    margin-bottom: 2rem;
-}
-.product-img{
-    width: 100%;
-    height: 260px;
-    object-fit: contain;
-}
-
-.product-name{
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.product > ul > li{
-    font-size: 1.4rem;
-    font-weight: 500;
-    list-style: none;
-    line-height: 2;
-    text-align: center;
-}
-
-.product-price{
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-}
-
-.link-product{
-    display: block;
-    width: max-content;
-    margin-inline: auto;
-}
-
-.products-container .product {
-    gap: 1.5rem;
-}
-
-footer{
-    margin-top: 4rem;
-    padding: 2rem 8rem;
-    height: 8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #5555;
-    box-shadow: 0 0 1rem #0002;
-}
-
-.footer-container-logo{
-    width: 8rem;
-}
-
 .delivery-point-section{
     display: flex;
     flex-direction: column;
@@ -250,14 +111,30 @@ footer{
 }
 
 .delivery-point-section p, .delivery-points a{
-    border: 0.2rem solid var(--primary-color);
+    border: none;
     color: var(--black-color);
     display: inline-block;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     font-weight: 700;
     margin: 1.5rem;
+    font-size: 2rem;
 
     transition: all .3s ease;
+}
+
+.entregas{
+    font-size: 6rem;
+    max-width: 70%;
+    color: var(--primary-color);
+    text-wrap: balance;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.ubi{
+    width: 2rem;
+    height: auto;
+    padding-top: -2rem;
 }
 .delivery-point-section p:hover{
     background-color: var(--primary-color);
@@ -267,27 +144,6 @@ footer{
 }
 .delivery-points{
     padding: 1rem;
-}
-
-.mi-pedido{
-    position: relative;
-}
-
-.numero{
-    position: absolute;
-    display: inline-block;
-    margin-top: 1rem;
-    margin-left: -1rem;
-    height: 2rem;
-    width: 2rem;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    color: var(--bg-color);
-}
-
-.mis-pedidos{
-    display: inline-block;
-    margin-top: 1rem;
 }
 
 .marcador{
@@ -348,4 +204,50 @@ footer{
         width: fit-content;
         margin-inline: auto;
     }
+}
+
+@media(max-width: 480px){
+    .slider-container{
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 7.5%;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        transform: none !important;
+        transition: none;
+    }
+
+    .slider-container::-webkit-scrollbar{
+        display: none;
+    }
+
+
+    .slide-product{
+        gap: 2rem;
+        padding: 1rem;
+    
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+    }
+
+    .container p{
+        text-align: center;
+        width: 100%;
+    }
+
+    .arrow{
+        display: none !important;
+    }
+
+    .delivery-point-section p, .delivery-points a{
+
+        padding: 0.3rem 0.7rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        transition: all .3s ease;
+    }
+
 }
