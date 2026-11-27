@@ -53,7 +53,7 @@ function enviarPedido(){
     });
 
     const mensajeFormateado = encodeURIComponent(mensaje);
-    const numero = "1136848154";
+    const numero = "5491136848154";
     window.open(`https://wa.me/${numero}?text=${mensajeFormateado}`, "_blank");
 }
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];

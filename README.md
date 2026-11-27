@@ -21,3 +21,20 @@ Cuenta con un catálogo de productos y un carrito de compras que permite gestion
 - HTML5
 - CSS3
 - JavaScript
+
+## Capturas del proyecto
+
+
+### Versión de escritorio
+![Serena portada escritorio](./Screenshots/Portada-escritorio.png)
+
+![Serena carrusel escritorio](./Screenshots/Carrusel-escritorio.png)
+
+![Serena combos escritorio](./Screenshots/Combos-escritorio.png)
+
+![Serena puntos de entrega escritorio](./Screenshots/Entrega-escritorio.png)
+
+![Serena pedidos escritorio](./Screenshots/Pedido-escritorio.png)
+
+### Versión móvil
+![Serena móvil](./Screenshots/Movil.png)
